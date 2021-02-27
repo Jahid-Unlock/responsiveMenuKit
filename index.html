@@ -9,25 +9,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="navbar">
-        <nav class="navber-lg">
+    <header class="header-wrapper">
+        <nav class="main-wrappe">
             <div class="logo">
                 <img src="assets/image/bmaker-logo.png" alt="">
             </div>
-            <div class="nav-links">
+            <div class="main-menu">
                 <ul>
                     <li><a href="#">home</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">service</a></li>
-                    <li class="has-dropdown">
+                    <li class="menu-item-has-children">
                         <a href="#">pages<i class='bx bx-chevron-down'></i></a>
 
                         <ul class="sub-menu">
-                            <li class="nav-child"><a href="#">page 1</a></li>
-                            <li class="nav-child"><a href="#">page 1</a></li>
-                            <li class="nav-child"><a href="#">page 1</a></li>
-                            <li class="nav-child"><a href="#">page 1</a></li>
-                            <li class="nav-child"><a href="#">page 1</a></li>
+                            <li class="main-menu-child"><a href="#">page 1</a></li>
+                            <li class="main-menu-child"><a href="#">page 1</a></li>
+                            <li class="main-menu-child"><a href="#">page 1</a></li>
+                            <li class="main-menu-child"><a href="#">page 1</a></li>
+                            <li class="main-menu-child"><a href="#">page 1</a></li>
 
                         </ul> 
                     </li>
@@ -52,14 +52,14 @@
                 <i class='bx bx-list-minus'></i>
             </div>
         </nav>
-        <nav class="navbar-sm" >
-            <div class="small-content">
-                <button class="small-btn"><i class='bx bx-x'></i></button>
-                <div class="small-logo">
+        <nav class="mobile-menu" >
+            <div class="mobile-menu-area">
+                <button class="menu-close-icon"><i class='bx bx-x'></i></button>
+                <div class="mobile-menu-logo">
                     <img src="assets/image/bmaker-logo.png" alt="img">
                 </div>
 
-                <ul>
+                <ul class="mobile-menu-items">
                     <li><a href="#">home</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">service</a></li>
@@ -84,9 +84,9 @@
 
 
 var openBtn = document.querySelector('.menu-btn-sm');
-var closeBtn = document.querySelector('.small-btn')
-var overlay = document.querySelector('.navbar-sm');
-var smallNav = document.querySelector('.small-content')
+var closeBtn = document.querySelector('.menu-close-icon')
+var overlay = document.querySelector('.mobile-menu');
+var smallNav = document.querySelector('.mobile-menu-area')
 
 openBtn.addEventListener('click', ()=>{
     overlay.style.width = '100%';

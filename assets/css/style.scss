@@ -13,18 +13,18 @@ body{
     margin: 0 auto;
 }
 
-.navbar{
+.header-wrapper{
 
     background: rgb(255, 255, 255);
    
 
-    .navber-lg{
+    .main-wrappe{
         display: flex;
         justify-content: space-between;
         align-items: center;
         min-height: 80px;
     
-        .nav-links{
+        .main-menu{
             ul{
                 list-style: none;
                 margin: 0;
@@ -32,14 +32,14 @@ body{
                 display: flex;
                 flex-wrap: wrap;
 
-                li.has-dropdown:hover ul.sub-menu{
+                li.menu-item-has-children:hover ul.sub-menu{
                     opacity: 1;
                     visibility: visible;
                     top: 100%;
                 }
                 li{
                     display: inline-block;
-                    padding: 40px 20px;
+                    padding: 28px 20px;
                     position: relative;
                     a{
                         text-decoration: none;
@@ -60,20 +60,30 @@ body{
                         z-index: 9999;
                         color: black;
                         min-width: 200px;
-                        padding: 0px 15px;
                         top: 120%;
                         opacity: 0;
                         visibility: hidden;
                         transition: all .3s ease-in;
                         border-top: 3px solid rgb(141, 214, 45);
     
-                        li.nav-child{
-                            padding: 15px 0;
-                            border-bottom: 1px solid rgba(179, 168, 168,0.5);;
+                        li.main-menu-child{
+                            border-bottom: 1px solid #eee;
+                            padding: 0;
+                            margin: 0;
 
                             a{
                                 font-size: 16px;
                                 font-weight: normal;
+                                display: block;
+                                padding: 10px 15px;
+                                background: #FFFFFF;
+                                color: #8bc34a;
+
+                                &:hover{
+                                    background: #8bc34a;
+                                    color: #fff;
+                                    transition: all 0.4s;
+                                }
                             }
                         }
                     }
@@ -91,8 +101,8 @@ body{
         }
 
         .menu-btn-sm{
-            padding: 7px 12px;
-            background: rgb(146, 146, 160);
+            padding: 6px 10px;
+            background: #8bc34a;
             color: white;
             font-size: 25px;
             cursor: pointer;
@@ -104,7 +114,7 @@ body{
 
 
 
-  .navbar-sm{
+  .mobile-menu{
       position: absolute;
       height: 100vh;
       width: 0%;
@@ -116,43 +126,58 @@ body{
       transition: all .4s ease-in-out;
       transition-timing-function: linear;
 
-      .small-content{
+      .mobile-menu-area{
           width: 0%;
           background: #FFFFFF;
           position:relative;
           height: 100%;
           overflow-x: hidden;
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           flex-direction: column;
           opacity: 0;
           transition: all .5s ease-in;
           transition-delay: .4s ;
           transition-timing-function: linear;
 
-          .small-logo{
-              text-align: center;
+          .mobile-menu-logo{
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-bottom: 30px;
           }
 
-          .small-btn{
+          .menu-close-icon{
               position: absolute;
-              top: 10px;
+              top: 20px;
               right: 10px;
               padding: 10px 10px;
+              border-radius: 50%;
+              background:#8bc34a;
+              border: none;
+
+              &:focus{
+                  border: none;
+                  outline: none;
+              }
+
+              i{
+                  font-size: 22px;
+                  color: #FFFFFF;
+              }
           }
 
           ul{
               list-style: none;
-              padding: 20px 20px;
 
               li{
-                  padding: 12px 0;
                   border-bottom: 1px solid rgba(0, 0, 0, .2);
                 a{
                     text-transform: uppercase;
                     font-weight: 600;
                     font-style: 600;
                     text-decoration: none;
+                    padding: 10px 15px;
+                    display: block;
                 }
               }
 
@@ -186,7 +211,7 @@ body{
         display: block !important;
     }
 
-    .nav-links{
+    .main-menu{
         display: none !important;
     }
 
